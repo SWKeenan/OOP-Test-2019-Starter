@@ -84,17 +84,35 @@ public class UI extends PApplet
 		strokeWeight(3);
 		fill(48,55,242);
 		rect(230,10,5,50);
+		fill(181,78,47);
+		rect(240,10,5,50);
+		fill(120,120,120);
+		rect(250,10,5,50);
 
 		stroke(0);
 		noFill();
 		rect(225,80,50,50);
 		line(300,105,275,105);
 		line(200,105,225,105);
+		strokeWeight(3);
+		fill(10,10,10);
+		rect(230,80,5,50);
+		fill(255,0,0);
+		rect(240,80,5,50);
+		fill(210,0,190);
+		rect(250,80,5,50);
 
 		stroke(0);
 		noFill();
 		rect(225,150,50,50);
 		line(300,175,275,175);
 		line(200,175,225,175);
+		strokeWeight(3);
+		fill(200,50,30);
+		rect(230,150,5,50);
+		fill(255);
+		rect(240,150,5,50);
+		fill(60,200,60);
+		rect(250,150,5,50);
 	}
 }
