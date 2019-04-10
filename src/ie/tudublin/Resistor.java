@@ -14,8 +14,7 @@ public class Resistor extends PApplet
     public int x;
     public int y;
 
-    public Resistor(UI ui, int x, int y){
-        this.ui = ui;
+    public Resistor(int x, int y){
         this.x = x;
         this.y = y;
         int hundreds = (value / 100);
@@ -35,7 +34,7 @@ public class Resistor extends PApplet
 	{
 	}
 	
-	public void draw()
+	public void render()
 	{		
         stroke(0);	
         rect(x,y,50,50);

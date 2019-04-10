@@ -11,7 +11,7 @@ public class UI extends PApplet
 	int value;
 	ArrayList<Resistor> resistors = new ArrayList<Resistor>();
 	ArrayList<Colour> colours = new ArrayList<Colour>();
-	Resistor r1;
+	Resistor r1, r2, r3;
 	public void separate(int value)
 	{
 		int hundreds = (value / 100);
@@ -63,11 +63,16 @@ public class UI extends PApplet
 	public void setup() 
 	{
 		r1 = new Resistor(10,10);
+		r2 = new Resistor(10,70);
+		r3 = new Resistor(10,140);
+
 	}
 	
 	public void draw()
 	{		
 		background(127);
-		r1.draw();	
+		r1.render();	
+		r2.render();
+		r3.render();
 	}
 }
