@@ -12,6 +12,7 @@ public class UI extends PApplet
 	ArrayList<Resistor> resistors = new ArrayList<Resistor>();
 	ArrayList<Colour> colours = new ArrayList<Colour>();
 	Resistor r1, r2, r3;
+	Table table;
 	public void separate(int value)
 	{
 		int hundreds = (value / 100);
@@ -21,12 +22,6 @@ public class UI extends PApplet
 		print(tens + ",");
 		println(ones);
 	}
-	// Table table = loadTable("resistors.csv");
-    //     for(TableRow tr:table.rows())
-    //     {
-    //         Resistor p = new Resistor(tr);
-    //         resistors.add(r);
-    //     }   
 
 	// public void loadColours()
 	// {
@@ -62,6 +57,15 @@ public class UI extends PApplet
 
 	public void setup() 
 	{
+		table = loadTable("resistors.csv", "header");
+		for (TableRow row : table.rows()) {
+		  
+		  int id = row.getInt("id");
+		  String species = row.getString("species");
+		  String name = row.getString("name");
+		  
+		  println(name + " (" + species + ") has an ID of " + id);
+		}
 		r1 = new Resistor(10,10);
 		r2 = new Resistor(10,70);
 		r3 = new Resistor(10,140);
@@ -114,5 +118,18 @@ public class UI extends PApplet
 		rect(240,150,5,50);
 		fill(60,200,60);
 		rect(250,150,5,50);
+
+		stroke(0);
+		noFill();
+		rect(225,220,50,50);
+		line(300,245,275,245);
+		line(200,245,225,245);
+		strokeWeight(3);
+		fill(10,10,10);
+		rect(230,220,5,50);
+		fill(255);
+		rect(240,220,5,50);
+		fill(240,150,60);
+		rect(250,220,5,50);
 	}
 }
