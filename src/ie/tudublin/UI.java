@@ -12,7 +12,7 @@ public class UI extends PApplet
 	ArrayList<Resistor> resistors = new ArrayList<Resistor>();
 	ArrayList<Colour> colours = new ArrayList<Colour>();
 	Resistor r1, r2, r3;
-	Table table;
+	Table table1, table2;
 	public void separate(int value)
 	{
 		int hundreds = (value / 100);
@@ -57,19 +57,21 @@ public class UI extends PApplet
 
 	public void setup() 
 	{
-		table = loadTable("resistors.csv", "header");
-		for (TableRow row : table.rows()) {
-		  
-		  int id = row.getInt("id");
-		  String species = row.getString("species");
-		  String name = row.getString("name");
-		  
-		  println(name + " (" + species + ") has an ID of " + id);
-		}
 		r1 = new Resistor(10,10);
 		r2 = new Resistor(10,70);
 		r3 = new Resistor(10,140);
-
+		Table table1 = loadTable("colours.csv");
+        for(TableRow tr:table1.rows())
+        {
+            Colour c = new Colour(value, value, value);
+            colours.add(c);
+		}   
+		Table table2 = loadTable("resistors.csv");
+        for(TableRow tr:table2.rows())
+        {
+            Resistor r = new Resistor(value, value);
+            resistors.add(r);
+        }   
 	}
 	
 	public void draw()
