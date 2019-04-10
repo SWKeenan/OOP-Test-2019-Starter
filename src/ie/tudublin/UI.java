@@ -70,9 +70,31 @@ public class UI extends PApplet
 	
 	public void draw()
 	{		
+		// Not working
 		background(127);
-		r1.render();	
-		r2.render();
-		r3.render();
+		// r1.render();	
+		// r2.render();
+		// r3.render();
+
+		stroke(0);
+		noFill();
+		rect(225,10,50,50);
+		line(300,35,275,35);
+		line(200,35,225,35);
+		strokeWeight(3);
+		fill(48,55,242);
+		rect(230,10,5,50);
+
+		stroke(0);
+		noFill();
+		rect(225,80,50,50);
+		line(300,105,275,105);
+		line(200,105,225,105);
+
+		stroke(0);
+		noFill();
+		rect(225,150,50,50);
+		line(300,175,275,175);
+		line(200,175,225,175);
 	}
 }
