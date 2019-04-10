@@ -11,7 +11,7 @@ public class Colour extends PApplet
     public int r, g, b;
     private String colorTable;
 
-    public Colour(UI ui, int r, int g, int b){
+    public Colour(int r, int g, int b){
         this.r = r;
         this.g = g;
         this.b = b;
@@ -19,8 +19,12 @@ public class Colour extends PApplet
 
 	public void settings()
 	{
-        Table colorTable = loadTable("colours.csv", "header");
-
+        // Table colorTable = loadTable("colours.csv", "header");
+        // for(TableRow tr:colorTable.rows())
+        // {
+        //     Colour c = new Colour(ui,r,g,b);
+        //     colorTable.add();
+        // }  
 	}
 
 	public void setup() 
